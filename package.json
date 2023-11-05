@@ -1,0 +1,16 @@
+{
+  "name": "schedule-sass",
+  "version": "1.0.0",
+  "description": "A demo applications of a SaSS Scheduling Platform",
+  "author": "Calob Humble <cshumble@protonmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.2.35",
+    "typescript": "^5.2.2"
+  }
+}

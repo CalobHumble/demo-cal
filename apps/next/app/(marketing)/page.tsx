@@ -1,6 +1,5 @@
 'use client'
 
-import Head from 'next/head'
 import {
   Box,
   Heading,
@@ -12,6 +11,7 @@ import {
   useColorModeValue,
   createIcon,
 } from '@chakra-ui/react'
+import { signIn } from 'next-auth/react'
 
 export default function CallToActionWithAnnotation() {
   return (
@@ -45,6 +45,7 @@ export default function CallToActionWithAnnotation() {
               bg={'blue.400'}
               rounded={'full'}
               px={6}
+              onClick={() => signIn('auth0', { callbackUrl: '/billing' })}
               _hover={{
                 bg: 'blue.500',
               }}>

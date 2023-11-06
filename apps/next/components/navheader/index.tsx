@@ -24,6 +24,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons'
+import { signIn } from 'next-auth/react';
 
 export default function NavHeader() {
   const { isOpen, onToggle } = useDisclosure();
@@ -67,7 +68,7 @@ export default function NavHeader() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'/api/auth/signin'}>
+          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} onClick={() => signIn('auth0', { callbackUrl: '/billing' })}>
             Sign in
           </Button>
           <Button
@@ -77,7 +78,7 @@ export default function NavHeader() {
             fontWeight={600}
             color={'white'}
             bg={'blue.400'}
-            href='/api/auth/signin'
+            onClick={() => signIn('auth0', { callbackUrl: '/billing' })}
             _hover={{
               bg: 'blue.300',
             }}>

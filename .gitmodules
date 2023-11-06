@@ -1,0 +1,3 @@
+[submodule "services/lotus"]
+	path = services/lotus
+	url = https://github.com/uselotus/lotus.git

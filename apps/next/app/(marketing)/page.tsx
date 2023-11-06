@@ -73,6 +73,15 @@ export default function CallToActionWithAnnotation() {
                 Start today for free!
               </Text>
             </Box>
+            <Heading
+            fontWeight={600}
+            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+            lineHeight={'110%'}>
+            <Text as={'span'} color={'red.500'}>
+              Auth is broken, because of a lack of domain + ssl :(
+            </Text><br />
+            Will try to fix on monday
+          </Heading>
           </Stack>
         </Stack>
       </Container>

@@ -26,6 +26,6 @@ export const {
   callbacks: {
     async session({ session, token }) {
       return { ...session, id: token.sub };
-    }
-  }
+    },
+  },
 })

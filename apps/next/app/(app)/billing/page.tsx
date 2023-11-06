@@ -2,7 +2,7 @@
 
 import { Box, Button, Card, CardBody, CardFooter, CardHeader, Flex, HStack, Input, Text, VStack } from "@chakra-ui/react";
 import { Eden } from '@/eden';
-import { useEffect, useState } from "react";
+import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 
 
@@ -62,7 +62,7 @@ export default function BillingPage() {
                   <CardHeader><Text>{sub.plan_name}</Text></CardHeader>
                   <CardBody>
                     <VStack>
-                      {sub.versions.at(0).components.at(0).tiers.map((tier) => (
+                      {sub.versions.at(0).components.at(0).tiers.map((tier: { range_start: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; range_end: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; cost_per_batch: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) => (
                         <Text>{tier.range_start} - {tier.range_end} {sub.versions.at(0).components.at(0).pricing_unit.symbol}{tier.cost_per_batch}/SMS</Text>
                       ))}
                     </VStack>

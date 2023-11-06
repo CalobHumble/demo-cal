@@ -1,0 +1,22 @@
+{
+  "name": "@schedule-sass/server",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^0.7.1",
+    "@elysiajs/trpc": "^0.7.0",
+    "@elysiajs/websocket": "^0.2.8",
+    "@trpc/server": "^10.43.1",
+    "elysia": "latest",
+    "luxon": "^3.4.3",
+    "twilio": "^4.19.0"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.3.3",
+    "bun-types": "latest"
+  },
+  "module": "src/index.ts"
+}
